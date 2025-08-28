@@ -2,7 +2,8 @@
 
 *A minimalist animated short film series exploring the cyclical nature of existence through the journey of a dandelion seed. Created entirely in Blender.*
 
-![alt text](.png)
+<img width="2000" height="2000" alt="image" src="https://github.com/user-attachments/assets/a48a6350-73bf-48cb-b77c-0dc0e1ed05af" />
+
 
 [![Blender](https://img.shields.io/badge/Blender-4.4-orange?logo=blender&logoColor=white)](https://www.blender.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
