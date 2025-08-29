@@ -10,7 +10,7 @@ function App() {
       <header className="hero">
         <h1>Sway of Life</h1>
         <p>follows a single dandelion seed as it travels through different environments, each episode serving as a meditation on a core theme of life</p>
-        <button>Get Started</button>
+        <button>Watch Now!</button>
       </header>
       {/* We will add the <Dandelion /> component here later */}
 
