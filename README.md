@@ -50,7 +50,24 @@ To explore the Blender files:
     The project requires **Blender 4.0+**. Open the `.blend` files from the respective episode directories.
 
 ---
-
+```
+Sway of Life/
+│
+├── Assets/                # Blender project files for each episode (1, 2, 3, 4...)
+│   ├── Episode1/
+│   ├── Episode2/
+│   └── Episode3/
+│
+├── node_modules/          # Node.js dependencies (auto-generated, ignore)
+│
+├── swayoflife/            # All React web code and frontend assets
+│   └── ...                # (See swayoflife/README.md for details)
+│
+├── .gitattributes         # Git settings
+├── package.json           # Project metadata (for root-level scripts, if any)
+├── package-lock.json      # Dependency lock file
+└── README.md              # This file (project overview, structure, and info)
+```
 ## Creative Vision
 
 This project is an exercise in visual storytelling and minimalist design. The goal is to evoke emotion and reflection without a single word, using:
