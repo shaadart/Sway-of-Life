@@ -49,7 +49,7 @@ To explore the Blender files:
 2.  **Open in Blender:**
     The project requires **Blender 4.0+**. Open the `.blend` files from the respective episode directories.
 
----
+### Project Structure
 ```
 Sway of Life/
 │
