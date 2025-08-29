@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=La+Belle+Aurore&display=swap');
+
+
+.text-block {
+  /* This tells the text block to take up the available space */
+  flex-grow: 1; 
+  max-width: 500px; /* Prevents text lines from getting too long */
+}
+
+.episode-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Creates space between the video and text */
+  margin-bottom: 10rem; /* Creates space between each full episode section */
+  padding: 0 5%; /* Adds some space on the sides of the screen */
+}
+
+.video-block {
+  width: 30vw; /* Sets the width to 30% of the viewport width */
+  max-width: 400px; /* Ensures it doesn't get too big on large screens */
+  aspect-ratio: 1 / 1; /* Makes the height equal to the width, creating a perfect square */
+  border-radius: 24px; /* This creates the rounded corners */
+  overflow: hidden; /* Clips the video inside to the rounded corners */
+  flex-shrink: 0; /* Prevents the block from shrinking if the text is long */
+}
+
+.episode-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the video fill the square without distortion */
+}
+
+/* Hero Section Styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero h1 {
+  
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #22223b;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #4a4e69;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  font-size: 1.25rem;
+  padding: 0.75rem 2.5rem;
+  background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(127, 90, 240, 0.15);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero button:hover {
+  background: linear-gradient(90deg, #2cb67d 0%, #7f5af0 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -11,9 +87,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +100,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

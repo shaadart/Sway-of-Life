@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { episodes } from './episodesData'; // Import the data
+import Episode from './Episode'; // Import our Episode component
+import './App.css'; // We'll add styles later
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app-container">
+      {/* Hero section with a big title covering whole screen, with a litle description and a button */}
+      <header className="hero">
+        <h1>Sway of Life</h1>
+        <p>follows a single dandelion seed as it travels through different environments, each episode serving as a meditation on a core theme of life</p>
+        <button>Get Started</button>
+      </header>
+      {/* We will add the <Dandelion /> component here later */}
+
+      <main className="episode-list">
+        {episodes.map(episode => (
+          <Episode
+            key={episode.id} // A unique key is important for lists in React
+            title={episode.title}
+            theme={episode.theme}
+            videoSrc={episode.videoSrc}
+          />
+        ))}
+      </main>
+
+      {/* We will add the <FinalSection /> component here later */}
+    </div>
+  );
 }
 
-export default App
+export default App;
