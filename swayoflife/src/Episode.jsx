@@ -10,29 +10,29 @@ const Episode = ({ title, ep, theme, videoSrc, cues }) => {
     setCurrentTime(e.target.currentTime);
   };
 
-  const activeCue = cues.find(
+  const activeCue = cues && cues.find(
     (cue) => currentTime >= cue.start && currentTime <= cue.end
   );
 
   useEffect(() => {
     const videoElement = videoRef.current;
+    if (!videoElement) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          videoElement.play();
+          videoElement.play().catch(() => { });
         } else {
           videoElement.pause();
         }
       },
       { threshold: 0.5 }
     );
-    if (videoElement) {
-      observer.observe(videoElement);
-    }
+
+    observer.observe(videoElement);
+
     return () => {
-      if (videoElement) {
-        observer.unobserve(videoElement);
-      }
+      observer.unobserve(videoElement);
     };
   }, []);
 
@@ -44,25 +44,27 @@ const Episode = ({ title, ep, theme, videoSrc, cues }) => {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <div className="video-block">
-        <video
-          ref={videoRef}
-          src={videoSrc}
-          className="episode-video"
-          loop
-          muted
-          playsInline
-          controls
-          onTimeUpdate={handleTimeUpdate}
-        />
-      </div>
-
-      <div className="text-block">
-         <motion.h2 className="episode-title">
+      <div className="video-title-wrapper">
+        <motion.h2 className="episode-title">
           <span className="episode-number">{ep}</span>
           <span className="episode-main-title">{title}</span>
         </motion.h2>
-        
+
+        <div className="video-block">
+          <video
+            ref={videoRef}
+            src={videoSrc}
+            className="episode-video"
+            loop
+            muted
+            playsInline
+            controls
+            onTimeUpdate={handleTimeUpdate}
+          />
+        </div>
+      </div>
+
+      <div className="text-block">
         <div className="poetic-text-container">
           <AnimatePresence>
             {activeCue && (
@@ -84,6 +86,7 @@ const Episode = ({ title, ep, theme, videoSrc, cues }) => {
         </div>
       </div>
     </motion.section>
+
   );
 };
 

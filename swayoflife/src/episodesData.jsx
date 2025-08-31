@@ -33,7 +33,7 @@ export const episodes = [
     id: 2,
     title: 'From the Lake',
     ep: 'Ep 2',
-    theme: 'Unexpected Happenings',
+    theme: 'Fate and The Unexpected',
     videoSrc: 'episode2.mp4',
     cues: [
       {
@@ -58,7 +58,7 @@ export const episodes = [
     id: 3,
     title: 'From the City',
     ep: 'Ep 3',
-    theme: 'Wanting vs. Having',
+    theme: 'Desire and Contentment',
     videoSrc: 'episode3.mp4',
     cues: [
       {

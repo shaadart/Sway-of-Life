@@ -11,13 +11,12 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  /* Removed text-align: center; as it's better handled by flex */
 }
 
 .episode-section {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 10rem;
   padding: 0 5%;
 }
@@ -31,28 +30,63 @@
   padding-right: 4rem;
 }
 
-/* In App.css */
+/* Title styles */
 .episode-title {
   display: flex;
   flex-direction: column;
-  /* Stack the number and title vertically */
   align-items: flex-start;
-  /* Align them to the left */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* In App.css */
+.episode-number {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-green-dark);
+  margin-bottom: 0.25rem;
+}
 
-/* Add position: relative to the container */
+.episode-main-title {
+  font-family: 'la belle aurore', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-brown-dark);
+}
+
+/* Text block */
+.text-block {
+  flex: 1;
+  padding-left: 4rem;
+  max-width: 480px;
+  text-align: left;
+}
+
+/* Video block - always consistent square */
+.video-block {
+  flex: 0 0 60%;
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  min-width: 350px;
+  /* was 300px */
+  max-width: 610px;
+  /* was 500px */
+}
+
+.episode-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Poetic text (desktop scattered) */
 .poetic-text-container {
-  position: relative; /* This is the anchor for the poetic lines */
-  min-height: 150px; /* Give it a bit more space */
-  margin-top: 1.5rem;
+  position: relative;
+  min-height: 180px;
+  margin-top: 2rem;
 }
 
-/* Make each line absolutely positioned */
 .poetic-line {
-  position: absolute; /* This lets us place it anywhere in the container */
+  position: absolute;
   margin: 0;
   font-size: 1.1rem;
   line-height: 1.7;
@@ -61,59 +95,19 @@
   font-weight: 500;
 }
 
-/* Now, we position each line uniquely! */
 .poetic-line:nth-child(1) {
   top: 0;
-  left: 25%; /* Indent the first line */
-  
+  left: 20%;
 }
 
 .poetic-line:nth-child(2) {
-  top: 45%;
-  left: 0; /* Second line starts from the left edge */
+  top: 40%;
+  left: 0;
 }
 
 .poetic-line:nth-child(3) {
-  top: 80%;
-  left: 40%; /* Indent the third line even more */
-}
-
-.episode-number {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--color-green-dark);
-  /* A light grey color */
-  margin-bottom: 0.25rem;
-}
-
-.episode-main-title {
-  font-family: 'la belle aurore', cursive;
-  /* A more decorative font for the main title */
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-brown-dark);
-  /* A darker color for the main title */
-}
-
-.text-block {
-  flex: 1;
-  padding-left: 4rem;
-  max-width: 500px;
-  text-align: left;
-  /* Align text to the left for readability */
-}
-
-.video-block {
-  flex: 0 0 65%;
-  aspect-ratio: 1 / 1;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-.episode-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  top: 75%;
+  left: 35%;
 }
 
 /* Hero Section Styles */
@@ -164,57 +158,83 @@
   transform: translateY(-2px) scale(1.04);
 }
 
-/* --- Responsive Styles --- */
-/* This media query targets tablets and phones */
 @media (max-width: 900px) {
 
-  /* --- Hero Section Adjustments --- */
+  /* Hero Section */
   .hero h1 {
     font-size: 2.8rem;
-    /* Make title smaller */
   }
 
   .hero p {
     font-size: 1.2rem;
-    padding: 0 3.4rem;
-    /* Reduce the large horizontal padding */
+    padding: 0 1.5rem;
+    /* reduce padding on small screens */
   }
 
-  /* --- Episode Section Adjustments --- */
+  /* Episode Section */
   .episode-section {
     flex-direction: column;
-    /* Stack video and text vertically */
-    margin-bottom: 6rem;
-    /* Reduce space between sections */
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+    /* make section fit nicely on phone */
+    width: 100%;
   }
 
   .episode-section:nth-child(even) {
     flex-direction: column;
-    /* Ensure it also stacks vertically */
   }
 
   .video-block {
-    flex-basis: auto;
-    /* Allow the video block to be its natural size */
     width: 100%;
-    /* Make the video block take the full width */
-    max-width: 400px;
-    /* But don't let it get huge on tablets */
+    max-width: 100%;
+    /* allow full width video */
+    aspect-ratio: 1 / 1;
+    /* keep it square */
   }
 
   .text-block {
+    width: 100%;
     max-width: 100%;
-    /* Allow text block to use the full width */
     padding-left: 0;
-    /* Remove side padding */
     text-align: center;
-    /* Center the text now that it's stacked */
-    margin-top: 2rem;
-    /* Add some space above the text */
+    margin-top: 1.25rem;
+    padding: 0 1rem;
+    /* add safe padding so text doesn’t touch edges */
   }
 
   .episode-section:nth-child(even) .text-block {
     padding-right: 0;
-    /* Remove the alternate padding too */
   }
+
+  /* Title above video */
+  .episode-title {
+    order: -1;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Poetic text condensed under video */
+  .poetic-text-container {
+    position: relative;
+    min-height: 3.5rem;
+
+    margin-top: 0.3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* keep text vertically centered */
+  }
+
+
+  .poetic-line {
+    position: relative;
+    display: block;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-right: 1rem;
+  }
+
 }
