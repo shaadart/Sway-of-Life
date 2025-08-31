@@ -6,29 +6,20 @@
   --color-yellow-light: #F7FFC8;
   --color-yellow-bright: #DFCF2B;
 }
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
 
 .episode-list {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* Removed text-align: center; as it's better handled by flex */
 }
 
 .episode-section {
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* Creates space between the video and text */
   margin-bottom: 10rem;
-  /* Creates space between each full episode section */
   padding: 0 5%;
-  /* Adds some space on the sides of the screen */
 }
 
 .episode-section:nth-child(even) {
@@ -38,36 +29,91 @@
 .episode-section:nth-child(even) .text-block {
   padding-left: 0;
   padding-right: 4rem;
-  /* Add the padding to the other side */
+}
+
+/* In App.css */
+.episode-title {
+  display: flex;
+  flex-direction: column;
+  /* Stack the number and title vertically */
+  align-items: flex-start;
+  /* Align them to the left */
+  margin-bottom: 1rem;
+}
+
+/* In App.css */
+
+/* Add position: relative to the container */
+.poetic-text-container {
+  position: relative; /* This is the anchor for the poetic lines */
+  min-height: 150px; /* Give it a bit more space */
+  margin-top: 1.5rem;
+}
+
+/* Make each line absolutely positioned */
+.poetic-line {
+  position: absolute; /* This lets us place it anywhere in the container */
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  font-family: 'la belle aurore', cursive;
+  font-weight: 500;
+}
+
+/* Now, we position each line uniquely! */
+.poetic-line:nth-child(1) {
+  top: 0;
+  left: 25%; /* Indent the first line */
+  
+}
+
+.poetic-line:nth-child(2) {
+  top: 45%;
+  left: 0; /* Second line starts from the left edge */
+}
+
+.poetic-line:nth-child(3) {
+  top: 80%;
+  left: 40%; /* Indent the third line even more */
+}
+
+.episode-number {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-green-dark);
+  /* A light grey color */
+  margin-bottom: 0.25rem;
+}
+
+.episode-main-title {
+  font-family: 'la belle aurore', cursive;
+  /* A more decorative font for the main title */
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-brown-dark);
+  /* A darker color for the main title */
 }
 
 .text-block {
   flex: 1;
-  /* This tells the text to fill the remaining space */
   padding-left: 4rem;
-  /* Adds some nice spacing between the video and text */
-
-  /* Keep all your font and color styles */
   max-width: 500px;
+  text-align: left;
+  /* Align text to the left for readability */
 }
 
 .video-block {
-  /* Remove the old width and max-width properties */
   flex: 0 0 65%;
-  /* This is the key: it sets a fixed width of 65% of the container */
-
-  /* Keep all the other great styles */
   aspect-ratio: 1 / 1;
   border-radius: 24px;
   overflow: hidden;
 }
 
-
 .episode-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Makes the video fill the square without distortion */
 }
 
 /* Hero Section Styles */
@@ -79,22 +125,19 @@
   align-items: center;
   text-align: center;
   padding: 0 1.5rem;
-  /* EXPAND THE WIDTH AND REMOVE THE TOP MARGIN AND PADDING */
   width: 100%;
   height: 100%;
   margin: 0;
-
-  background: radial-gradient(circle at top, var(--color-yellow-bright), var(--color-yellow-light), #fff);
+  background: radial-gradient(circle at top, var(--color-yellow-bright), var(--color-yellow-light), #f6f6f6);
 }
 
 .hero h1 {
-
   font-size: 3.4rem;
   font-weight: 800;
   margin-bottom: 3rem;
   color: var(--color-brown-dark);
   letter-spacing: 1px;
-  rotate: -3.4deg;;
+  rotate: -3.4deg;
 }
 
 .hero p {
@@ -121,43 +164,57 @@
   transform: translateY(-2px) scale(1.04);
 }
 
+/* --- Responsive Styles --- */
+/* This media query targets tablets and phones */
+@media (max-width: 900px) {
 
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* --- Hero Section Adjustments --- */
+  .hero h1 {
+    font-size: 2.8rem;
+    /* Make title smaller */
   }
 
-  to {
-    transform: rotate(360deg);
+  .hero p {
+    font-size: 1.2rem;
+    padding: 0 3.4rem;
+    /* Reduce the large horizontal padding */
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  /* --- Episode Section Adjustments --- */
+  .episode-section {
+    flex-direction: column;
+    /* Stack video and text vertically */
+    margin-bottom: 6rem;
+    /* Reduce space between sections */
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .episode-section:nth-child(even) {
+    flex-direction: column;
+    /* Ensure it also stacks vertically */
+  }
 
-.read-the-docs {
-  color: #888;
+  .video-block {
+    flex-basis: auto;
+    /* Allow the video block to be its natural size */
+    width: 100%;
+    /* Make the video block take the full width */
+    max-width: 400px;
+    /* But don't let it get huge on tablets */
+  }
+
+  .text-block {
+    max-width: 100%;
+    /* Allow text block to use the full width */
+    padding-left: 0;
+    /* Remove side padding */
+    text-align: center;
+    /* Center the text now that it's stacked */
+    margin-top: 2rem;
+    /* Add some space above the text */
+  }
+
+  .episode-section:nth-child(even) .text-block {
+    padding-right: 0;
+    /* Remove the alternate padding too */
+  }
 }

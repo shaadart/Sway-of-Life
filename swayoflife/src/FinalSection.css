@@ -1,0 +1,36 @@
+/* In FinalSection.css */
+.final-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers vertically */
+  align-items: center;    /* This centers horizontally */
+  min-height: 90vh;         /* Gives the section plenty of space */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.final-quote {
+  font-size: 2rem;
+  font-style: italic;
+  max-width: 600px; /* Prevents the quote from being too wide on large screens */
+  margin-bottom: 3rem;
+  line-height: 1.5;
+  color: #a0a0a0;
+}
+
+.blender-link {
+  display: inline-block;
+  background-color: #f0c04f; /* A warm, dandelion-yellow color */
+  color: #121212;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px; /* Makes a pill-shaped button */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blender-link:hover {
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+  box-shadow: 0 5px 15px rgba(240, 192, 79, 0.3); /* Adds a soft glow */
+}

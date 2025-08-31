@@ -2,6 +2,7 @@ import React from 'react';
 import { episodes } from './episodesData'; // Import the data
 import Episode from './Episode'; // Import our Episode component
 import './App.css'; // We'll add styles later
+import FinalSection from './FinalSection';
 
 function App() {
   return (
@@ -19,13 +20,16 @@ function App() {
           <Episode
             key={episode.id} // A unique key is important for lists in React
             title={episode.title}
+            ep={episode.ep}
             theme={episode.theme}
             videoSrc={episode.videoSrc}
+            cues={episode.cues}
           />
         ))}
       </main>
 
       {/* We will add the <FinalSection /> component here later */}
+      <FinalSection />
     </div>
   );
 }
