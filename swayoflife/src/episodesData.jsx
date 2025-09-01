@@ -9,26 +9,116 @@ export const episodes = [
     videoSrc: 'episode1.mp4',
     cues: [
       {
-        start: 2,
-        end: 5,
+        start: 0,
+        end: 10,
         lines: [
-          "Here Dandelion means hope..."
+          "Life begins with birth—",
+          "the first gift every being receives."
         ]
       },
       {
-        start: 6,
-        end: 10,
+        start: 10,
+        end: 13,
         lines: [
-          "...a silent promise on the breeze.",
+          "The wind blows…",
+          "guiding the dandelion’s journey."
         ]
       },
-      {start: 11, end: 14, lines: [
-          "To leave what's known, to find release."
+      {
+        start: 13,
+        end: 16,
+        lines: [
+          "Oh a snail..",
+
+        ]
+      },
+      {
+        start: 16,
+        end: 20,
+        lines: [
+          "",
+          "",
+          "and a Bird.."
+
+        ]
+      },
+
+      {
+        start: 35,
+        end: 41,
+        lines: [
+          "A mother bird feeds her chicks—",
+          "she can only feed one."
+        ]
+      },
+      {
+        start: 44,
+        end: 48,
+        lines: [
+          '" Mother! Where is mine? "',
+
+        ]
+      },
+      {
+        start: 56,
+        end: 60,
+        lines: [
+          "Children, It's time..",
+          "the wind is coming.."
+        ]
+      },
+      {
+        start: 60,
+        end: 70,
+        lines: [
+          '" Why did you not left with your siblings? "'
+        ]
+      },
+      {
+        start: 73,
+        end: 75,
+        lines: [
+          '" I was scared too, dear ',
+          'but this will be your most wonderful experience."',
+
+        ]
+      },
+      {
+        start: 78,
+        end: 81,
+        lines: [
+          '" Mother! I don\'t want to leave you!, ',
+          'I am scared! "',
+
+        ]
+      },
+      {
+        start: 82,
+        end: 89,
+        lines: [
+          "The baby bird must learn to fly—",
+          "it has no other choice."
+        ]
+      },
+
+      {
+        start: 91,
+        end: 98,
+        lines: [
+          "The seed finally flies,",
+          "looking back one last time."
+        ]
+      },
+      {
+        start: 98,
+        end: 120,
+        lines: [
+          "All beings must learn",
+          "to let go and begin."
         ]
       }
     ]
   },
-
   {
     id: 2,
     title: 'From the Lake',
@@ -37,23 +127,96 @@ export const episodes = [
     videoSrc: 'episode2.mp4',
     cues: [
       {
-        start: 1,
-        end: 4,
+        start: 0,
+        end: 6,
         lines: [
-          "In the dawn's light, we find our way..."
+          "After birth comes death—",
+          "a truth we all must face."
         ]
       },
       {
-        start: 5,
-        end: 10,
+        start: 6,
+        end: 15,
         lines: [
-          "...with every step, a chance to sway.",
-          "To embrace the unknown, to take flight."
+          '"O mother! Where am I? "',
+          "Little Duckling wonders..."
         ]
+      },
+
+      {
+        start: 30,
+        end: 34,
+        lines: [
+          '"It is mine!"',
+          '"hey! it is mine!"',
+          '"yo, it is mine!"',
+
+        ]
+      },
+      {
+        start: 35,
+        end: 39,
+        lines: [
+          '"We should ask her..."',
+          //  '""'
+          //  '"Why do you want it?"'
+        ]
+      },
+      {
+        start: 43,
+        end: 45,
+        lines: [
+          '"Hey, Who\'s she?"'
+        ]
+      },
+      {
+        start: 45,
+        end: 60,
+        lines: [
+          '"Stay Away!, said a duck,"',
+          "she won’t give up 'hope' to a crane."
+        ]
+      },
+      {
+        start: 59,
+        end: 65,
+        lines: [
+          "Some ducks accept fate,",
+          "Some ducks gave up on 'hope'",
+          "And one is fighting for 'hope'."
+        ]
+      },
+      {
+        start: 65,
+        end: 72,
+        lines: [
+          ''
+        ]
+      },
+      {
+        start: 72,
+        end: 77,
+        lines: [
+          "The crocodile arrives—",
+          "death cannot be avoided."
+        ]
+      },
+      {
+        start: 87,
+        end: 100,
+        lines: [
+          "The pond starts turning red…",
+          "a life moves on.",
+          "leaving it all behind."
+          //isne yeh sab bhi dekh liya (pehli baar) (first time exp) 
+
+        ]
+      },
+      {
+
       }
     ]
-  }
-  ,
+  },
   {
     id: 3,
     title: 'From the City',
@@ -63,44 +226,85 @@ export const episodes = [
     cues: [
       {
         start: 0,
-        end: 5,
+        end: 30,
         lines: [
-          "As we sail into the great unknown..."
+          "A city shines above—",
+          "but feels empty below."
         ]
       },
       {
-        start: 6,
-        end: 12,
+        start: 30,
+        end: 50,
         lines: [
-          "...the horizon beckons, a siren's call.",
-          "With every wave, we rise and fall."
+          "A dandelion lands—",
+          "children see it as hope."
+        ]
+      },
+      {
+        start: 50,
+        end: 70,
+        lines: [
+          "A boy lets go of his balloon—",
+          "to chase something greater."
+        ]
+      },
+      {
+        start: 70,
+        end: 90,
+        lines: [
+          "Chaos fills the city—",
+          "hope changes everything."
+        ]
+      },
+      {
+        start: 90,
+        end: 110,
+        lines: [
+          "The dandelion vanishes—",
+          "but hope remains."
         ]
       }
     ]
   },
   {
     id: 4,
-    title: 'To the Home',
+    title: 'To Home',
     ep: 'Ep 4',
     theme: 'Circle of Life and Death',
     videoSrc: 'episode4.mp4',
     cues: [
       {
         start: 0,
-        end: 5,
+        end: 20,
         lines: [
-          "In the stillness, echoes of time..."
+          "A soldier moves through war—",
+          "the dandelion finds him."
         ]
       },
       {
-        start: 6,
-        end: 12,
+        start: 20,
+        end: 40,
         lines: [
-          "...whispers of stories left behind.",
-          "In every shadow, a memory lingers."
+          "It grows where he falls—",
+          "life returns to the earth."
+        ]
+      },
+      {
+        start: 40,
+        end: 60,
+        lines: [
+          "A new plant rises—",
+          "the cycle begins again."
+        ]
+      },
+      {
+        start: 60,
+        end: 80,
+        lines: [
+          "The seeds fly once more—",
+          "life sways on."
         ]
       }
     ]
   }
-
 ];
