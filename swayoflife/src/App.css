@@ -7,6 +7,12 @@
   --color-yellow-bright: #DFCF2B;
 }
 
+.app-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .episode-list {
   max-width: 1280px;
   margin: 0 auto;
@@ -230,7 +236,7 @@
 
   .poetic-line {
     position: relative;
-    
+
     display: block;
     margin: 0.25rem 0;
     font-size: 1rem;
