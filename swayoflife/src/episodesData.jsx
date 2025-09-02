@@ -3,122 +3,134 @@
 export const episodes = [
   {
     id: 1,
-    title: 'From the Valley',
-    ep: 'Ep 1',
-    theme: 'Hope, New Beginnings',
-    videoSrc: 'episode1.mp4',
+    title: "From the Valley",
+    ep: "Ep 1",
+    theme: "Hope, New Beginnings",
+    videoSrc: "episode1.mp4",
     cues: [
       {
         start: 0,
-        end: 10,
+        end: 8,
         lines: [
           "Life begins with birth—",
-          "the first gift every being receives."
+          "the first gift,",
+          "the first breath."
         ]
       },
       {
-        start: 10,
+        start: 9,
         end: 13,
         lines: [
-          "The wind blows…",
-          "guiding the dandelion’s journey."
+          "The wind blows,",
+          "and everyone listens."
         ]
       },
       {
         start: 13,
         end: 16,
         lines: [
-          "Oh a snail..",
-
+          "Oh a snail…",
+          ""
         ]
       },
       {
-        start: 16,
-        end: 20,
+        start: 17,
+        end: 24,
         lines: [
-          "",
-          "",
-          "and a Bird.."
-
+          "Oh! a bird,",
+          'for her is the food.'
         ]
       },
-
       {
         start: 35,
-        end: 41,
+        end: 43,
         lines: [
-          "A mother bird feeds her chicks—",
-          "she can only feed one."
+          "Mother bird returns,",
+          "but her beak holds",
+          "food for only one."
         ]
       },
       {
         start: 44,
         end: 48,
         lines: [
-          '" Mother! Where is mine? "',
-
+          "\"Mother! Where is mine?\"",
+          "the little one cries."
         ]
       },
       {
         start: 56,
         end: 60,
         lines: [
-          "Children, It's time..",
-          "the wind is coming.."
+          "\"Children… it is time.",
+          "The wind is here.\""
         ]
       },
       {
-        start: 60,
-        end: 70,
+        start: 65,
+        end: 68,
         lines: [
-          '" Why did you not left with your siblings? "'
+          "\"Why did you not leave,",
+          "with your brothers and sisters?\""
         ]
       },
       {
-        start: 73,
+        start: 70,
         end: 75,
         lines: [
-          '" I was scared too, dear ',
-          'but this will be your most wonderful experience."',
-
+          "\"Mother, I don’t want to go!",
+          "I don’t want to leave home.",
+          "I am scared!\""
         ]
       },
       {
-        start: 78,
-        end: 81,
+        start: 76,
+        end: 80,
         lines: [
-          '" Mother! I don\'t want to leave you!, ',
-          'I am scared! "',
-
+          "\"I was scared too, dear.",
+          "But the wind carried me,",
+          "to brighter mornings.\""
+        ]
+      },
+      {
+        start: 81,
+        end: 85,
+        lines: [
+          "\"The wind brought me here,",
+          "so I could love you.",
+          "Home is never far.\""
         ]
       },
       {
         start: 82,
         end: 89,
         lines: [
-          "The baby bird must learn to fly—",
-          "it has no other choice."
+          "The hungry chick waits—",
+          "it must fly today,",
+          "or go hungry."
         ]
       },
-
       {
-        start: 91,
+        start: 93,
         end: 98,
         lines: [
-          "The seed finally flies,",
-          "looking back one last time."
+          "The seed lifts at last,",
+          "turning back once,",
+          "\"Every road leads home,\" whispers Mother."
         ]
       },
       {
         start: 98,
         end: 120,
         lines: [
-          "All beings must learn",
-          "to let go and begin."
+          "All beings must learn—",
+          "to let go,",
+          "to begin."
         ]
       }
     ]
   },
+
   {
     id: 2,
     title: 'From the Lake',
