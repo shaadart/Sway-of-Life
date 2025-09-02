@@ -131,104 +131,112 @@ export const episodes = [
     ]
   },
 
-  {
-    id: 2,
-    title: 'From the Lake',
-    ep: 'Ep 2',
-    theme: 'Fate and The Unexpected',
-    videoSrc: 'episode2.mp4',
-    cues: [
-      {
-        start: 0,
-        end: 6,
-        lines: [
-          "After birth comes death—",
-          "a truth we all must face."
-        ]
-      },
-      {
-        start: 6,
-        end: 15,
-        lines: [
-          '"O mother! Where am I? "',
-          "Little Duckling wonders..."
-        ]
-      },
-
-      {
-        start: 30,
-        end: 34,
-        lines: [
-          '"It is mine!"',
-          '"hey! it is mine!"',
-          '"yo, it is mine!"',
-
-        ]
-      },
-      {
-        start: 35,
-        end: 39,
-        lines: [
-          '"We should ask her..."',
-          //  '""'
-          //  '"Why do you want it?"'
-        ]
-      },
-      {
-        start: 43,
-        end: 45,
-        lines: [
-          '"Hey, Who\'s she?"'
-        ]
-      },
-      {
-        start: 45,
-        end: 60,
-        lines: [
-          '"Stay Away!, said a duck,"',
-          "she won’t give up 'hope' to a crane."
-        ]
-      },
-      {
-        start: 59,
-        end: 65,
-        lines: [
-          "Some ducks accept fate,",
-          "Some ducks gave up on 'hope'",
-          "And one is fighting for 'hope'."
-        ]
-      },
-      {
-        start: 65,
-        end: 72,
-        lines: [
-          ''
-        ]
-      },
-      {
-        start: 72,
-        end: 77,
-        lines: [
-          "The crocodile arrives—",
-          "death cannot be avoided."
-        ]
-      },
-      {
-        start: 87,
-        end: 100,
-        lines: [
-          "The pond starts turning red…",
-          "a life moves on.",
-          "leaving it all behind."
-          //isne yeh sab bhi dekh liya (pehli baar) (first time exp) 
-
-        ]
-      },
-      {
-
-      }
-    ]
-  },
+{
+  id: 2,
+  title: "From the Lake",
+  ep: "Ep 2",
+  theme: "Fate and The Unexpected",
+  videoSrc: "episode2.mp4",
+  cues: [
+    {
+      start: 0,
+      end: 6,
+      lines: [
+        "The lake is calm,",
+        "but life carries secrets,",
+        "that no one can see."
+      ]
+    },
+    {
+      start: 6,
+      end: 15,
+      lines: [
+        "\"O mother… where am I?\"",
+        "asks the little one,",
+        "soft and unsure."
+      ]
+    },
+    {
+      start: 30,
+      end: 34,
+      lines: [
+        "\"It is mine!\"",
+        "\"No, it is mine!\"",
+        "\"Give it to me!\""
+      ]
+    },
+    {
+      start: 35,
+      end: 39,
+      lines: [
+        "\"We should ask her…\"",
+        "whispers a duck,",
+        "eyes fixed on hope."
+      ]
+    },
+    {
+      start: 43,
+      end: 45,
+      lines: [
+        "\"Who is she?\"",
+        "a curious voice asks."
+      ]
+    },
+    {
+      start: 45,
+      end: 60,
+      lines: [
+        "\"Stay away!\" quacks one,",
+        "she will never give up hope,",
+        "not even to the crane."
+      ]
+    },
+    {
+      start: 59,
+      end: 65,
+      lines: [
+        "Some ducks accept fate,",
+        "some give up on hope,",
+        "and some only quack."
+      ]
+    },
+    {
+      start: 66,
+      end: 70,
+      lines: [
+        "But one fights,",
+        "with all its heart,",
+        "for hope."
+      ]
+    },
+    {
+      start: 70,
+      end: 72,
+      lines: [
+        "Until…"
+      ]
+    },
+    {
+      start: 72,
+      end: 77,
+      lines: [
+        "The crocodile comes—",
+        "silent, sudden,",
+        "like life’s surprise."
+      ]
+    },
+    {
+      start: 87,
+      end: 100,
+      lines: [
+        "The pond turns red…",
+        "a life moves on,",
+        "leaving it all behind."
+      ]
+    }
+  ]
+}
+,
   {
     id: 3,
     title: 'From the City',
