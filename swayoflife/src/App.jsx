@@ -11,7 +11,9 @@ function App() {
       <header className="hero">
         <h1>Sway of Life</h1>
         <p>follows a single dandelion seed as it travels through different environments, each episode serving as a meditation on a core theme of life</p>
-        <button>Watch Now!</button>
+        <button onClick={() => {
+          document.getElementById('episode2').scrollIntoView({ behavior: 'smooth' });
+        }}>Watch Now!</button>
       </header>
       {/* We will add the <Dandelion /> component here later */}
 
@@ -19,6 +21,7 @@ function App() {
         {episodes.map(episode => (
           <Episode
             key={episode.id} // A unique key is important for lists in React
+            id={episode.ep === "Ep 2" ? "episode2" : ""}
             title={episode.title}
             ep={episode.ep}
             theme={episode.theme}

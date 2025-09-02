@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Episode = ({ title, ep, theme, videoSrc, cues }) => {
+const Episode = ({ title, ep, theme, videoSrc, cues, id }) => {
   const videoRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0);
 
@@ -38,6 +38,7 @@ const Episode = ({ title, ep, theme, videoSrc, cues }) => {
 
   return (
     <motion.section
+      id={id}
       className="episode-section"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
