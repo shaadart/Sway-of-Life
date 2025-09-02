@@ -71,15 +71,22 @@ const Episode = ({ title, ep, theme, videoSrc, cues, id }) => {
             {activeCue && (
               <motion.div
                 key={activeCue.start}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                className="lines-container"
               >
                 {activeCue.lines.map((line, index) => (
-                  <p key={index} className="poetic-line">
+                  <motion.p
+                    key={index}
+                    className="poetic-line"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.3 // Add 0.3s delay for each subsequent line
+                    }}
+                  >
                     {line}
-                  </p>
+                  </motion.p>
                 ))}
               </motion.div>
             )}
