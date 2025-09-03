@@ -3,6 +3,7 @@ import { episodes } from './episodesData'; // Import the data
 import Episode from './Episode'; // Import our Episode component
 import './App.css'; // We'll add styles later
 import FinalSection from './FinalSection';
+import { FaPlay } from 'react-icons/fa';
 
 function App() {
   return (
@@ -11,9 +12,9 @@ function App() {
       <header className="hero">
         <h1>Sway of Life</h1>
         <p>follows a single dandelion seed as it travels through different environments, each episode serving as a meditation on a core theme of life</p>
-        <button onClick={() => {
+        <button className="play-button" onClick={() => {
           document.getElementById('episode2').scrollIntoView({ behavior: 'smooth' });
-        }}>Watch Now!</button>
+        }}><FaPlay /><span>Play</span></button>
       </header>
       {/* We will add the <Dandelion /> component here later */}
 

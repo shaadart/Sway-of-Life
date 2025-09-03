@@ -36,6 +36,16 @@
   padding-right: 4rem;
 }
 
+.play-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.play-button svg {
+  margin-top: -2px;
+}
+
 /* Title styles */
 .episode-title {
   display: flex;
