@@ -4,6 +4,7 @@ import Episode from './Episode'; // Import our Episode component
 import './App.css'; // We'll add styles later
 import FinalSection from './FinalSection';
 import { FaPlay } from 'react-icons/fa';
+import { FaPlay } from 'react-icons/fa';
 
 function App() {
   return (
