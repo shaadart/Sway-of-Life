@@ -609,7 +609,8 @@ export const episodes = [
       start: 155,
       end: 160,
       lines: [
-        "But just as his fingers neared, the seed vanished."
+        "But just as his fingers neared,",
+        "the seed vanished."
       ]
     },
     {
