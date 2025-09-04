@@ -32,7 +32,7 @@ The narrative is conveyed purely through visuals, sound design, and symbolic ima
 | :--- | :--- | :--- | :--- |
 | 01 | **From the Valley** | Letting Go, Courage | `Final` |
 | 02 | **From the Lake** | Fate, The Unexpected | `Final` |
-| 03 | **From the City** | Wanting vs. Having | `In Progress` |
+| 03 | **From the City** | Wanting vs. Having | `Final` |
 | 04 | **To Home** | The Cycle of Life & Death | `Pre-Production` |
 
 ---
