@@ -13,7 +13,7 @@ function App() {
         <h1>Sway of Life</h1>
         <p>follows a single dandelion seed as it travels through different environments, each episode serving as a meditation on a core theme of life</p>
         <button className="play-button" onClick={() => {
-          document.getElementById('episode2').scrollIntoView({ behavior: 'smooth' });
+          document.getElementById('episode3').scrollIntoView({ behavior: 'smooth' });
         }}><FaPlay /><span>Play</span></button>
       </header>
       {/* We will add the <Dandelion /> component here later */}
@@ -22,7 +22,7 @@ function App() {
         {episodes.map(episode => (
           <Episode
             key={episode.id} // A unique key is important for lists in React
-            id={episode.ep === "Ep 2" ? "episode2" : ""}
+            id={episode.ep === "Ep 3" ? "episode3" : ""}
             title={episode.title}
             ep={episode.ep}
             theme={episode.theme}
