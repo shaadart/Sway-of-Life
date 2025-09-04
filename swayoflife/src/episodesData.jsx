@@ -29,7 +29,7 @@ export const episodes = [
         start: 13,
         end: 16,
         lines: [
-          "Oh a snail…",
+          "Oh a worm",
           ""
         ]
       },
