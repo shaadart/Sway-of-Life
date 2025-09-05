@@ -10,7 +10,7 @@ function App() {
     <div className="app-container">
       {/* Hero section with a big title covering whole screen, with a litle description and a button */}
       <header className="hero">
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '0.5rem' }}>
           <video
             src="/dandelion.webm"
             className="dandelion-video"
@@ -23,7 +23,7 @@ function App() {
               height: '144px',
               objectFit: 'contain',
               display: 'block',
-              margin: '-21px auto',
+              margin: '0 auto',
               position: 'static',
               zIndex: 1,
               pointerEvents: 'none',
