@@ -23,7 +23,7 @@ function App() {
               height: '144px',
               objectFit: 'contain',
               display: 'block',
-              margin: '0 auto',
+              margin: '-21px auto',
               position: 'static',
               zIndex: 1,
               pointerEvents: 'none',
