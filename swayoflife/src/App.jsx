@@ -10,11 +10,33 @@ function App() {
     <div className="app-container">
       {/* Hero section with a big title covering whole screen, with a litle description and a button */}
       <header className="hero">
-        <h1>Sway of Life</h1>
-        <p>follows a single dandelion seed as it travels through different environments, each episode serving as a meditation on a core theme of life</p>
-        <button className="play-button" onClick={() => {
-          document.getElementById('episode3').scrollIntoView({ behavior: 'smooth' });
-        }}><FaPlay /><span>Play</span></button>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <video
+            src="/dandelion.webm"
+            className="dandelion-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: '233px',
+              height: '144px',
+              objectFit: 'contain',
+              display: 'block',
+              margin: '0 auto',
+              position: 'static',
+              zIndex: 1,
+              pointerEvents: 'none',
+            }}
+          />
+        </div>
+        <h1 style={{ textAlign: 'center' }}>Sway of Life</h1>
+        <p style={{ textAlign: 'center' }}>follows a single dandelion seed as it travels through different environments, each episode serving as a meditation on a core theme of life</p>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <button className="play-button" onClick={() => {
+            document.getElementById('episode3').scrollIntoView({ behavior: 'smooth' });
+          }}><FaPlay /><span>Play</span></button>
+        </div>
       </header>
       {/* We will add the <Dandelion /> component here later */}
 
